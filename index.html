@@ -341,7 +341,7 @@
                     <div class="options-group">
                         <button class="option-btn" onclick="wrongAnswer(this, 'l1_q1')">Segitiga Sama Kaki</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l1_q1')">Persegi Panjang</button>
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l1', 'fb-txt-l1', 'Tepat! Bentuk Segitiga Siku-siku bersembunyi di mana-mana di dunia nyata.', 1, 1)">Segitiga Siku-Siku</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l1', 'fb-txt-l1', 'Tepat! Bentuk Segitiga Siku-siku bersembunyi di mana-mana di dunia nyata.', 1, 1)">Segitiga Siku-Siku</button>
                     </div>
                 </div>
                 
@@ -352,8 +352,12 @@
                     <div class="options-group">
                         <button class="option-btn" onclick="wrongAnswer(this, 'l1_q2')">Sisi Alas (Bawah)</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l1_q2')">Sisi Tegak (Berdiri)</button>
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l1', 'fb-txt-l1', 'Brilian! Sisi Miring (Hipotenusa) yang letaknya berhadapan dengan sudut siku-siku, akan selalu menjadi sisi terpanjang.', 1, 2)">Sisi Miring (Hipotenusa)</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l1', 'fb-txt-l1', 'Brilian! Sisi Miring (Hipotenusa) yang letaknya berhadapan dengan sudut siku-siku, akan selalu menjadi sisi terpanjang.', 1, 2)">Sisi Miring (Hipotenusa)</button>
                     </div>
+                </div>
+                
+                <div style="display: flex; justify-content: flex-start; margin-top: 20px; margin-bottom: 15px;">
+                    <button class="btn-action" id="btnPrev-l1" style="display:none; background: var(--text-muted);" onclick="prevPhaseL1()">← Sebelumnya</button>
                 </div>
                 
                 <div class="feedback-box" id="fb-l1">
@@ -430,7 +434,7 @@
                     <div class="options-group">
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q1')">A. Persegi</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q1')">B. Persegi panjang</button>
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l2', 'fb-txt-l2', 'Tepat sekali! Bentuk utuh yang terbentuk adalah Trapesium.', 2, 1)">C. Trapesium</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l2', 'fb-txt-l2', 'Tepat sekali! Bentuk utuh yang terbentuk adalah Trapesium.', 2, 1)">C. Trapesium</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q1')">D. Jajar genjang</button>
                     </div>
                 </div>
@@ -441,7 +445,7 @@
                     <div class="question-text">Perhatikan luas segitiga-segitiga siku-siku dan luas bangun yang terbentuk tadi. Bagaimana hubungan luas segitiga-segitiga siku-siku dengan luas bangun yang terbentuk?</div>
                     <div class="options-group">
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q2')">A. Luas trapesium > jumlah luas ketiga segitiga</button>
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l2', 'fb-txt-l2', 'Benar! Total luas ketiga segitiga tersebut sama dengan luas trapesium utuh.', 2, 2)">B. Luas trapesium = jumlah luas ketiga segitiga</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l2', 'fb-txt-l2', 'Benar! Total luas ketiga segitiga tersebut sama dengan luas trapesium utuh.', 2, 2)">B. Luas trapesium = jumlah luas ketiga segitiga</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q2')">C. Luas trapesium &lt; jumlah luas ketiga segitiga</button>
                     </div>
                 </div>
@@ -453,7 +457,7 @@
                     <div class="options-group">
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q3')">A. Trapesium</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q3')">B. Persegi panjang</button>
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l2', 'fb-txt-l2', 'Luar biasa! Empat segitiga tersebut membentuk batasan luar berupa Persegi yang besar.', 2, 3)">C. Persegi</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l2', 'fb-txt-l2', 'Luar biasa! Empat segitiga tersebut membentuk batasan luar berupa Persegi yang besar.', 2, 3)">C. Persegi</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q3')">D. Jajar genjang</button>
                     </div>
                 </div>
@@ -464,10 +468,14 @@
                     <div class="question-text">Perhatikan persegi besar yang terbentuk. Di dalamnya terdapat empat segitiga siku-siku dan sebuah persegi di bagian tengah (area kuning). Bagaimana hubungan luas persegi besar dengan luas empat segitiga siku-siku dan persegi di bagian tengah?</div>
                     <div class="options-group">
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q4')">A. Luas persegi besar = luas empat segitiga − luas persegi tengah</button>
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l2', 'fb-txt-l2', 'Brilian! Keseluruhan luas persegi besar merupakan gabungan dari 4 segitiga dan 1 persegi kecil di tengah.', 2, 4)">B. Luas persegi besar = luas empat segitiga + luas persegi tengah</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l2', 'fb-txt-l2', 'Brilian! Keseluruhan luas persegi besar merupakan gabungan dari 4 segitiga dan 1 persegi kecil di tengah.', 2, 4)">B. Luas persegi besar = luas empat segitiga + luas persegi tengah</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q4')">C. Luas persegi besar = luas persegi tengah − luas empat segitiga</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l2_q4')">D. Tidak ada hubungan</button>
                     </div>
+                </div>
+
+                <div style="display: flex; justify-content: flex-start; margin-top: 20px; margin-bottom: 15px;">
+                    <button class="btn-action" id="btnPrev-l2" style="display:none; background: var(--text-muted);" onclick="prevPhaseL2()">← Sebelumnya</button>
                 </div>
 
                 <div class="feedback-box" id="fb-l2">
@@ -507,6 +515,7 @@
                     <input type="range" id="expSlider" min="0" max="100" value="0">
                 </div>
             </div>
+            
             <div class="interaction-panel">
                 
                 <!-- Activity 5 (Has Q) -->
@@ -515,7 +524,7 @@
                     <div class="question-text">Sistem menyorot persegi warna cokelat pada sisi (a). Berdasarkan pengetahuanmu sebelumnya, bagaimana rumusan untuk menghitung luas persegi tersebut?</div>
                     <div class="options-group">
                         <button class="option-btn" onclick="wrongAnswer(this, 'l3_q1')">sisi + sisi = a + a</button>
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l3', 'fb-txt-l3', 'Tepat! Luas persegi dihitung dengan mengalikan sisi-sisinya, yang juga sering ditulis sebagai pangkat dua (a²).', 3, 1)">sisi &times; sisi = a &times; a</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l3', 'fb-txt-l3', 'Tepat! Luas persegi dihitung dengan mengalikan sisi-sisinya, yang juga sering ditulis sebagai pangkat dua (a²).', 3, 1)">sisi &times; sisi = a &times; a</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l3_q1')">4 &times; sisi = 4 &times; a</button>
                     </div>
                 </div>
@@ -525,7 +534,7 @@
                     <div class="mission-label">🧪 Aktivitas 6: Eksplorasi Luas</div>
                     <div class="question-text">Geser slider di atas secara perlahan. Apa yang terjadi pada kepingan-kepingan bangun tersebut?</div>
                     <div class="options-group">
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l3', 'fb-txt-l3', 'Logika yang bagus! (Hukum Kekekalan Luas).', 3, 2)">Kepingan berpindah, total luas tidak berubah</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l3', 'fb-txt-l3', 'Logika yang bagus! (Hukum Kekekalan Luas).', 3, 2)">Kepingan berpindah, total luas tidak berubah</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l3_q2')">Luasnya semakin mengecil</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l3_q2')">Kepingan menghilang</button>
                     </div>
@@ -536,7 +545,7 @@
                     <div class="mission-label">⚙️ Aktivitas 7: Menalar</div>
                     <div class="question-text">Setelah slider bergeser 100%, kepingan dari persegi dengan sisi a dan persegi dengan sisi b memenuhi area yang mana?</div>
                     <div class="options-group">
-                        <button class="option-btn" onclick="correctAnswerHandler('fb-l3', 'fb-txt-l3', 'Luar biasa! Kepingan tersebut membuktikan bahwa gabungan luas persegi a dan b sama dengan luas persegi c.', 3, 3)">Menyatu pas menutupi persegi sisi miring (c)</button>
+                        <button class="option-btn" onclick="correctAnswerHandler(this, 'fb-l3', 'fb-txt-l3', 'Luar biasa! Kepingan tersebut membuktikan bahwa gabungan luas persegi a dan b sama dengan luas persegi c.', 3, 3)">Menyatu pas menutupi persegi sisi miring (c)</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l3_q3')">Menutupi persegi (a) kembali</button>
                         <button class="option-btn" onclick="wrongAnswer(this, 'l3_q3')">Tidak menutupi apapun</button>
                     </div>
@@ -548,6 +557,10 @@
                     <div class="question-text">Berdasarkan bukti bahwa luas persegi kecil menyatu menjadi persegi besar, tuliskan hubungan tersebut!<br><br><span style="font-size:0.9rem; color:var(--text-muted); font-weight:normal;">Petunjuk: Ketik pangkat menggunakan tanda ^. Contoh: a² ditulis sebagai a^2.</span></div>
                     <input type="text" id="formulaInput" placeholder="Ketik rumusmu di sini (contoh: x^2 + y^2 = z^2)">
                     <button class="btn-primary" onclick="checkFormula()">SIMPULKAN KONSEP</button>
+                </div>
+
+                <div style="display: flex; justify-content: flex-start; margin-top: 20px; margin-bottom: 15px;">
+                    <button class="btn-action" id="btnPrev-l3" style="display:none; background: var(--text-muted);" onclick="prevPhaseL3()">← Sebelumnya</button>
                 </div>
 
                 <div class="feedback-box" id="fb-l3">
@@ -580,11 +593,10 @@
                     <div>
                         <div class="control-group">
                             <label style="font-weight:600; display:block; margin-bottom:8px;">Panjang a: <span id="l4-val-a" class="text-primary">6</span></label>
-                            <input type="range" id="l4-slider-a" min="3" max="12" value="6" oninput="updateL4()" style="width:100%;">
+                            <input type="range" id="l4-slider-a" min="0" max="4" value="2" oninput="updateL4()" style="width:100%;">
                         </div>
-                        <div class="control-group">
-                            <label style="font-weight:600; display:block; margin-bottom:8px;">Panjang b: <span id="l4-val-b" class="text-primary">8</span></label>
-                            <input type="range" id="l4-slider-b" min="3" max="12" value="8" oninput="updateL4()" style="width:100%;">
+                        <div class="control-group" style="margin-top: 15px;">
+                            <label style="font-weight:600; display:block; margin-bottom:8px;">Panjang b: <span id="l4-val-b" class="text-primary">8</span> <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal;">(Otomatis menyesuaikan)</span></label>
                         </div>
                     </div>
                     <div style="background:var(--bg-body); padding:20px; border-radius:16px; border:1px solid var(--border);">
@@ -682,6 +694,11 @@
             <div class="interaction-panel">
                 <div class="mission-label">🌍 LEVEL 7: Apply</div>
                 <div class="question-text">Penerapan Teorema Pythagoras. Selesaikan simulasi ini sebelum menghitung!</div>
+                
+                <div style="background: var(--warning-light); border: 1px solid var(--warning); color: #92400e; padding: 12px 15px; border-radius: 10px; font-size: 0.95rem; font-weight: 500; margin-bottom: 20px;">
+                    📌 <strong>Petunjuk:</strong> Kerjakan simulasi secara berurutan mulai dari tab paling kiri (Tangga) hingga tab paling kanan (Layang-layang).
+                </div>
+
                 <div class="context-tabs">
                     <div class="ctx-tab active" onclick="switchTab(1)">🪜 Tangga</div>
                     <div class="ctx-tab" onclick="switchTab(2)">🏠 Atap Rumah</div>
@@ -780,7 +797,7 @@
                     <div class="feedback-box" id="fb-l7-t1">
                         <span id="fb-icon-t1" style="font-size:1.8rem;">💡</span>
                         <div style="flex-grow:1;"><div style="font-weight:700; font-size:0.85rem; margin-bottom:3px;">FEEDBACK</div><div id="fb-txt-t1"></div></div>
-                        <button class="btn-action btnNextL7" style="display:none; margin-top:10px; width:auto;" onclick="completeLevel(7)">Selesai Level 7 ➔</button>
+                        <button class="btn-action" id="btn-l7-next-t1" style="display:none; margin-top:10px; width:auto;" onclick="switchTab(2)">Lanjut ke Atap Rumah ➔</button>
                     </div>
                 </div>
 
@@ -834,7 +851,7 @@
                     <div class="feedback-box" id="fb-l7-t2">
                         <span id="fb-icon-t2" style="font-size:1.8rem;">💡</span>
                         <div style="flex-grow:1;"><div style="font-weight:700; font-size:0.85rem; margin-bottom:3px;">FEEDBACK</div><div id="fb-txt-t2"></div></div>
-                        <button class="btn-action btnNextL7" style="display:none; margin-top:10px; width:auto;" onclick="completeLevel(7)">Selesai Level 7 ➔</button>
+                        <button class="btn-action" id="btn-l7-next-t2" style="display:none; margin-top:10px; width:auto;" onclick="switchTab(3)">Lanjut ke Mercusuar ➔</button>
                     </div>
                 </div>
 
@@ -897,7 +914,7 @@
                     <div class="feedback-box" id="fb-l7-t3">
                         <span id="fb-icon-t3" style="font-size:1.8rem;">💡</span>
                         <div style="flex-grow:1;"><div style="font-weight:700; font-size:0.85rem; margin-bottom:3px;">FEEDBACK</div><div id="fb-txt-t3"></div></div>
-                        <button class="btn-action btnNextL7" style="display:none; margin-top:10px; width:auto;" onclick="completeLevel(7)">Selesai Level 7 ➔</button>
+                        <button class="btn-action" id="btn-l7-next-t3" style="display:none; margin-top:10px; width:auto;" onclick="switchTab(4)">Lanjut ke Layang-layang ➔</button>
                     </div>
                 </div>
 
@@ -961,7 +978,7 @@
                     <div class="feedback-box" id="fb-l7-t4">
                         <span id="fb-icon-t4" style="font-size:1.8rem;">💡</span>
                         <div style="flex-grow:1;"><div style="font-weight:700; font-size:0.85rem; margin-bottom:3px;">FEEDBACK</div><div id="fb-txt-t4"></div></div>
-                        <button class="btn-action btnNextL7" style="display:none; margin-top:10px; width:auto;" onclick="completeLevel(7)">Selesai Level 7 ➔</button>
+                        <button class="btn-action btnNextL7" id="btn-l7-finish" style="display:none; margin-top:10px; width:auto;" onclick="completeLevel(7)">Lanjut ke Level 8 ➔</button>
                     </div>
                 </div>
             </div>
@@ -1117,15 +1134,24 @@
 
             // Reset UI feedbacks
             document.querySelectorAll('.feedback-box').forEach(fb => fb.style.display = 'none');
+            document.querySelectorAll('.question-block').forEach(qb => { 
+                qb.removeAttribute('data-completed'); 
+                qb.removeAttribute('data-feedback'); 
+            });
             document.querySelectorAll('.options-group').forEach(og => {
                 og.style.display = 'grid';
+                og.style.pointerEvents = 'auto';
                 og.querySelectorAll('.option-btn').forEach(btn => {
                     btn.style.borderColor = "var(--border)"; 
                     btn.style.backgroundColor = "var(--surface)"; 
                     btn.style.color = "var(--text-main)";
                 });
             });
-            ['btnNext-l1', 'btnNext-l2', 'btnNext-l3', 'btnNextL4', 'btnNextL5', 'btnNextL6', 'btnNextL7'].forEach(id => {
+            ['btnNext-l1', 'btnNext-l2', 'btnNext-l3', 'btnNextL4', 'btnNextL5', 'btnNextL6', 'btn-l7-next-t1', 'btn-l7-next-t2', 'btn-l7-next-t3', 'btn-l7-finish'].forEach(id => {
+                const btn = document.getElementById(id);
+                if(btn) btn.style.display = 'none';
+            });
+            ['btnPrev-l1', 'btnPrev-l2', 'btnPrev-l3'].forEach(id => {
                 const btn = document.getElementById(id);
                 if(btn) btn.style.display = 'none';
             });
@@ -1162,19 +1188,21 @@
             document.getElementById('l3-phaseIndicator').innerText = 'Aktivitas 5 dari 8';
             for(let i=1; i<=4; i++) document.getElementById(`l3-act${i}`).classList.remove('active');
             document.getElementById('l3-act1').classList.add('active');
-            pBrown.style.stroke = "#ffffff"; pBrown.style.strokeWidth = "1.5px"; pBrown.classList.remove('highlight-shape');
+            const pb = document.getElementById('piece-brown');
+            if (pb) { pb.style.stroke = "#ffffff"; pb.style.strokeWidth = "1.5px"; pb.classList.remove('highlight-shape'); }
             document.getElementById('mathAnimText').innerHTML = "sisi &times; sisi = a &times; a";
             document.getElementById('mathAnimText').style.opacity = "1";
             document.getElementById('label-a').innerHTML = "a"; document.getElementById('label-b').innerHTML = "b";
             document.getElementById('label-c').style.fill = "#94a3b8";
             document.getElementById('l3-sliderUI').style.display = "none";
-            if(expSlider) { expSlider.value = 0; expSlider.dispatchEvent(new Event('input')); }
+            const sldExp = document.getElementById('expSlider');
+            if(sldExp) { sldExp.value = 0; sldExp.dispatchEvent(new Event('input')); }
             const formulaInput = document.getElementById('formulaInput');
             if(formulaInput) { formulaInput.value = ''; formulaInput.style.borderColor = "var(--border)"; formulaInput.style.backgroundColor = "var(--surface)"; }
             const btnNL3 = document.getElementById('btnNext-l3'); if (btnNL3) { btnNL3.innerText = "Lanjut ➔"; btnNL3.onclick = nextPhaseL3; }
 
             // Reset L4
-            const s4a = document.getElementById('l4-slider-a'); if(s4a) { s4a.value = 6; document.getElementById('l4-slider-b').value = 8; document.getElementById('l4-input-c').value = ''; updateL4(); }
+            const s4a = document.getElementById('l4-slider-a'); if(s4a) { s4a.value = 2; document.getElementById('l4-input-c').value = ''; updateL4(); }
 
             // Reset L5
             if(typeof l5CorrectItems !== 'undefined') {
@@ -1197,26 +1225,10 @@
             try {
                 const s71b = document.getElementById('l7-t1-slider-b'); 
                 if(s71b) {
-                    s71b.value = 12; 
-                    document.getElementById('l7-t1-slider-c').value = 15; 
-                    document.getElementById('l7-t1-input-a').value = ''; 
-                    updateL7T1();
-                    
-                    document.getElementById('l7-t2-slider-a').value = 15; 
-                    document.getElementById('l7-t2-slider-b').value = 20; 
-                    document.getElementById('l7-t2-input-c').value = ''; 
-                    updateL7T2();
-                    
-                    document.getElementById('l7-t3-slider-a').value = 10; 
-                    document.getElementById('l7-t3-slider-c').value = 26; 
-                    document.getElementById('l7-t3-input-b').value = ''; 
-                    updateL7T3();
-                    
-                    document.getElementById('l7-t4-slider-a').value = 12; 
-                    document.getElementById('l7-t4-slider-b').value = 16; 
-                    document.getElementById('l7-t4-input-c').value = ''; 
-                    updateL7T4();
-                    
+                    s71b.value = 12; document.getElementById('l7-t1-slider-c').value = 15; document.getElementById('l7-t1-input-a').value = ''; updateL7T1();
+                    document.getElementById('l7-t2-slider-a').value = 15; document.getElementById('l7-t2-slider-b').value = 20; document.getElementById('l7-t2-input-c').value = ''; updateL7T2();
+                    document.getElementById('l7-t3-slider-a').value = 10; document.getElementById('l7-t3-slider-c').value = 26; document.getElementById('l7-t3-input-b').value = ''; updateL7T3();
+                    document.getElementById('l7-t4-slider-a').value = 12; document.getElementById('l7-t4-slider-b').value = 16; document.getElementById('l7-t4-input-c').value = ''; updateL7T4();
                     switchTab(1);
                 }
             } catch(e) { console.warn("L7 Reset Error:", e); }
@@ -1301,6 +1313,27 @@
                 }
             }, stepTime);
         }
+        
+        function restorePhaseState(levelNum, phaseNum) {
+            const currentBlock = document.getElementById(`l${levelNum}-act${phaseNum}`);
+            const fb = document.getElementById(`fb-l${levelNum}`);
+            const txt = document.getElementById(`fb-txt-l${levelNum}`);
+            const btnNext = document.getElementById(`btnNext-l${levelNum}`);
+            
+            if(currentBlock.getAttribute('data-completed') === 'true') {
+                fb.className = 'feedback-box success';
+                fb.style.display = 'flex';
+                txt.innerHTML = currentBlock.getAttribute('data-feedback');
+                btnNext.style.display = 'inline-block';
+                if (levelNum === 1 && phaseNum === 2) btnNext.innerText = "Selesai Level 1 ➔";
+                else if (levelNum === 2 && phaseNum === 4) btnNext.innerText = "Selesai Level 2 ➔";
+                else if (levelNum === 3 && phaseNum === 4) btnNext.innerText = "Selesai Level 3 ➔";
+                else btnNext.innerText = "Lanjut ➔";
+            } else {
+                fb.style.display = 'none';
+                btnNext.style.display = 'none';
+            }
+        }
 
         function completeLevel(level) {
             let earned = 0;
@@ -1335,14 +1368,10 @@
                         earned += gameState.attempts['l6_syn'] ? 0 : 13;
                         break;
                     case 7:
-                        // Level 7 score is handled dynamically when answering each tab.
-                        // We fetch the earned score directly instead of recalculating it here.
                         earned = gameState.scores[7].earned;
                         break;
                 }
                 
-                // For level 7, the score is already added to totalScore inside the checkL7Tx functions.
-                // To avoid double counting, we only add to totalScore if it's not Level 7.
                 if (level !== 7) {
                     gameState.scores[level].earned = earned;
                     gameState.totalScore += earned;
@@ -1368,6 +1397,10 @@
         function nextLevelFromModal() {
             document.getElementById('levelCompleteModal').style.display = 'none';
             navTo('level' + (currentCompletingLevel + 1));
+        }
+
+        function closeModal() {
+            document.getElementById('finalModal').style.display = 'none';
         }
 
         function renderSummary() {
@@ -1421,10 +1454,26 @@
             setTimeout(() => { btn.style.borderColor = "var(--border)"; btn.style.backgroundColor = "var(--surface)"; btn.style.color = "var(--text-main)"; }, 1000); 
         }
 
-        function correctAnswerHandler(fbId, txtId, message, levelNum, phaseNum) {
-            const currentPanel = document.querySelector('.page.active .question-block.active .options-group'); if(currentPanel) currentPanel.style.display = 'none'; 
+        function correctAnswerHandler(btn, fbId, txtId, message, levelNum, phaseNum) {
+            const currentBlock = document.querySelector('.page.active .question-block.active');
+            if (currentBlock) {
+                const og = currentBlock.querySelector('.options-group');
+                if (og) {
+                    og.style.pointerEvents = 'none';
+                }
+                
+                if (btn) {
+                    btn.style.borderColor = "var(--success)";
+                    btn.style.backgroundColor = "var(--success-light)";
+                    btn.style.color = "var(--success)";
+                }
+
+                currentBlock.setAttribute('data-completed', 'true');
+                currentBlock.setAttribute('data-feedback', message);
+            }
+            
             const fb = document.getElementById(fbId); fb.className = 'feedback-box success'; fb.style.display = 'flex'; 
-            document.getElementById(txtId).innerText = message;
+            document.getElementById(txtId).innerHTML = message;
             const btnNext = document.getElementById('btnNext-l' + levelNum);
             if(btnNext) {
                 btnNext.style.display = 'inline-block';
@@ -1462,14 +1511,13 @@
 
         function nextPhaseL1() {
             document.getElementById(`l1-act${l1Phase}`).classList.remove('active'); 
-            document.getElementById('fb-l1').style.display = "none"; 
-            document.getElementById('btnNext-l1').style.display = "none";
             l1Phase++;
             
             if(l1Phase <= 2) { 
                 document.getElementById(`l1-act${l1Phase}`).classList.add('active'); 
                 document.getElementById('l1-progressBar').style.width = `${((l1Phase - 1)/2)*100}%`; 
                 document.getElementById('l1-phaseIndicator').innerText = `Aktivitas ${l1Phase} dari 2`; 
+                document.getElementById('btnPrev-l1').style.display = 'inline-block';
             }
             if(l1Phase === 2) {
                 document.getElementById('l1-scene1').style.display = 'none';
@@ -1478,6 +1526,26 @@
                 btn.innerText = "Selesai Level 1 ➔";
                 btn.onclick = () => completeLevel(1);
             }
+            
+            restorePhaseState(1, l1Phase);
+        }
+        
+        function prevPhaseL1() {
+            if(l1Phase <= 1) return;
+            document.getElementById(`l1-act${l1Phase}`).classList.remove('active');
+            l1Phase--;
+            document.getElementById(`l1-act${l1Phase}`).classList.add('active');
+            
+            document.getElementById('l1-progressBar').style.width = `${((l1Phase - 1)/2)*100}%`;
+            document.getElementById('l1-phaseIndicator').innerText = `Aktivitas ${l1Phase} dari 2`;
+            
+            if(l1Phase === 1) {
+                document.getElementById('l1-scene1').style.display = 'flex';
+                document.getElementById('l1-scene2').style.display = 'none';
+                document.getElementById('btnPrev-l1').style.display = 'none';
+            }
+            
+            restorePhaseState(1, l1Phase);
         }
 
         // LEVEL 2 Interactions
@@ -1489,8 +1557,6 @@
         if(l2Slider1) {
             l2Slider1.addEventListener('input', function() {
                 let v = this.value / 100;
-                // Animate to position
-                // Initial translates: P1(-50, 0), P2(100, 50), P3(50, -100) rot 20
                 let p1X = -50 * (1 - v), p1Y = 0;
                 let p2X = 100 * (1 - v), p2Y = 50 * (1 - v);
                 let p3X = 50 * (1 - v),  p3Y = -100 * (1 - v);
@@ -1498,10 +1564,8 @@
 
                 l2P1.setAttribute('transform', `translate(${p1X}, ${p1Y})`);
                 l2P1Sq.setAttribute('transform', `translate(${p1X}, ${p1Y})`);
-                
                 l2P2.setAttribute('transform', `translate(${p2X}, ${p2Y})`);
                 l2P2Sq.setAttribute('transform', `translate(${p2X}, ${p2Y})`);
-                
                 l2P3.setAttribute('transform', `translate(${p3X}, ${p3Y}) rotate(${p3R})`);
             });
         }
@@ -1513,7 +1577,6 @@
         if(l2Slider2) {
             l2Slider2.addEventListener('input', function() {
                 let v = this.value / 100;
-                // Initial translates: S1(-40, -40), S2(40, -40), S3(40, 40), S4(-40, 40)
                 let s1X = -40 * (1 - v), s1Y = -40 * (1 - v);
                 let s2X = 40 * (1 - v),  s2Y = -40 * (1 - v);
                 let s3X = 40 * (1 - v),  s3Y = 40 * (1 - v);
@@ -1530,28 +1593,54 @@
 
         function nextPhaseL2() {
             document.getElementById(`l2-act${l2Phase}`).classList.remove('active'); 
-            document.getElementById('fb-l2').style.display = "none"; 
-            document.getElementById('btnNext-l2').style.display = "none";
             l2Phase++;
             
             if(l2Phase <= 4) { 
                 document.getElementById(`l2-act${l2Phase}`).classList.add('active'); 
                 document.getElementById('l2-progressBar').style.width = `${((l2Phase - 1)/4)*100}%`; 
                 document.getElementById('l2-phaseIndicator').innerText = `Aktivitas ${l2Phase} dari 4`; 
+                document.getElementById('btnPrev-l2').style.display = 'inline-block';
             }
             if(l2Phase === 2) {
-                document.getElementById('l2-slider-wrap1').style.display = 'none'; // Lock first slider
+                document.getElementById('l2-slider-wrap1').style.display = 'none'; 
             }
             if(l2Phase === 3) {
                 document.getElementById('l2-scene1').style.display = 'none';
                 document.getElementById('l2-scene2').style.display = 'flex';
             }
             if(l2Phase === 4) {
-                document.getElementById('l2-slider-wrap2').style.display = 'none'; // Lock second slider
+                document.getElementById('l2-slider-wrap2').style.display = 'none'; 
                 const btn = document.getElementById('btnNext-l2');
                 btn.innerText = "Selesai Level 2 ➔";
                 btn.onclick = () => completeLevel(2);
             }
+            restorePhaseState(2, l2Phase);
+        }
+        
+        function prevPhaseL2() {
+            if(l2Phase <= 1) return;
+            document.getElementById(`l2-act${l2Phase}`).classList.remove('active');
+            l2Phase--;
+            document.getElementById(`l2-act${l2Phase}`).classList.add('active');
+            
+            document.getElementById('l2-progressBar').style.width = `${((l2Phase - 1)/4)*100}%`;
+            document.getElementById('l2-phaseIndicator').innerText = `Aktivitas ${l2Phase} dari 4`;
+            
+            if(l2Phase === 1) {
+                document.getElementById('l2-slider-wrap1').style.display = 'block';
+                document.getElementById('btnPrev-l2').style.display = 'none';
+            }
+            if(l2Phase === 2) {
+                document.getElementById('l2-scene1').style.display = 'flex';
+                document.getElementById('l2-scene2').style.display = 'none';
+                document.getElementById('l2-slider-wrap1').style.display = 'none';
+                document.getElementById('btnPrev-l2').style.display = 'inline-block';
+            }
+            if(l2Phase === 3) {
+                document.getElementById('l2-slider-wrap2').style.display = 'block';
+            }
+            
+            restorePhaseState(2, l2Phase);
         }
 
         // LEVEL 3 Interactions
@@ -1559,10 +1648,15 @@
         const pBrown = document.getElementById('piece-brown'), pRed = document.getElementById('piece-red'), pGreen = document.getElementById('piece-green'), pYellow = document.getElementById('piece-yellow'), pBlue = document.getElementById('piece-blue'), l3LblA = document.getElementById('label-a'), l3LblB = document.getElementById('label-b'), l3LblC = document.getElementById('label-c');
         
         function nextPhaseL3() {
-            document.getElementById(`l3-act${l3Phase}`).classList.remove('active'); l3Fb.style.display = "none"; l3Phase++;
-            document.getElementById('btnNext-l3').style.display = "none";
+            document.getElementById(`l3-act${l3Phase}`).classList.remove('active'); 
+            l3Phase++;
 
-            if(l3Phase <= 4) { document.getElementById(`l3-act${l3Phase}`).classList.add('active'); l3Prog.style.width = `${((l3Phase - 1)/4)*100}%`; l3Ind.innerText = `Aktivitas ${l3Phase + 4} dari 8`; }
+            if(l3Phase <= 4) { 
+                document.getElementById(`l3-act${l3Phase}`).classList.add('active'); 
+                l3Prog.style.width = `${((l3Phase - 1)/4)*100}%`; 
+                l3Ind.innerText = `Aktivitas ${l3Phase + 4} dari 8`; 
+                document.getElementById('btnPrev-l3').style.display = 'inline-block';
+            }
             
             if(l3Phase === 2) { 
                 document.getElementById('mathAnimText').style.opacity = "0"; 
@@ -1573,6 +1667,37 @@
             if(l3Phase === 4) {
                 document.getElementById('l3-sliderUI').style.display = "none"; 
             }
+            
+            restorePhaseState(3, l3Phase);
+        }
+        
+        function prevPhaseL3() {
+            if(l3Phase <= 1) return;
+            document.getElementById(`l3-act${l3Phase}`).classList.remove('active');
+            l3Phase--;
+            document.getElementById(`l3-act${l3Phase}`).classList.add('active');
+            
+            document.getElementById('l3-progressBar').style.width = `${((l3Phase - 1)/4)*100}%`;
+            document.getElementById('l3-phaseIndicator').innerText = `Aktivitas ${l3Phase + 4} dari 8`;
+            
+            if(l3Phase === 1) {
+                document.getElementById('btnPrev-l3').style.display = 'none';
+                document.getElementById('mathAnimText').style.opacity = "1"; 
+                l3LblA.innerHTML = "a"; l3LblB.innerHTML = "b";
+                document.getElementById('l3-sliderUI').style.display = "none";
+            }
+            if(l3Phase === 2) {
+                document.getElementById('btnPrev-l3').style.display = 'inline-block';
+                document.getElementById('mathAnimText').style.opacity = "0"; 
+                pBrown.classList.remove('highlight-shape'); pBrown.style.stroke = "#ffffff"; pBrown.style.strokeWidth = "1.5px"; 
+                l3LblA.innerHTML = "a&sup2;"; l3LblB.innerHTML = "b&sup2;"; 
+                document.getElementById('l3-sliderUI').style.display = "block"; 
+            }
+            if(l3Phase === 3) {
+                document.getElementById('l3-sliderUI').style.display = "block"; 
+            }
+            
+            restorePhaseState(3, l3Phase);
         }
         
         const expSlider = document.getElementById('expSlider');
@@ -1589,9 +1714,15 @@
             let input = document.getElementById('formulaInput').value.toLowerCase().replace(/\s/g, '');
             if(input.includes("a^2+b^2=c^2") || input.includes("b^2+a^2=c^2") || input.includes("c^2=a^2+b^2") || input.includes("c^2=b^2+a^2") || input.includes("a2+b2=c2") || input.includes("b2+a2=c2")) {
                 l3Fb.className = 'feedback-box success'; l3Fb.style.display = "flex"; document.getElementById('l3-progressBar').style.width = "100%";
-                l3FbTxt.innerHTML = "<strong>SELAMAT! 🎉</strong><br>Kamu telah menemukan Teorema Pythagoras: <strong>a&sup2; + b&sup2; = c&sup2;</strong>"; createConfetti();
                 
-                // Visual effect in SVG
+                const winMsg = "<strong>SELAMAT! 🎉</strong><br>Kamu telah menemukan Teorema Pythagoras: <strong>a&sup2; + b&sup2; = c&sup2;</strong>";
+                l3FbTxt.innerHTML = winMsg; 
+                createConfetti();
+                
+                const currentBlock = document.getElementById('l3-act4');
+                currentBlock.setAttribute('data-completed', 'true');
+                currentBlock.setAttribute('data-feedback', winMsg);
+                
                 document.getElementById('mathAnimText').innerHTML = "<tspan style='font-size:24px;'>a&sup2; + b&sup2; = c&sup2;</tspan>";
                 document.getElementById('mathAnimText').style.opacity = "1";
 
@@ -1606,27 +1737,63 @@
         }
 
         function updateL4() {
-            const a = parseInt(document.getElementById('l4-slider-a').value), b = parseInt(document.getElementById('l4-slider-b').value);
-            document.getElementById('l4-val-a').innerText = a; document.getElementById('l4-val-b').innerText = b;
-            const scale = 12, originX = 250, originY = 220, endX = originX + (a * scale), endY = originY - (b * scale);
+            const val = parseInt(document.getElementById('l4-slider-a').value);
+            const config = [
+                {a: 3, b: 4},
+                {a: 4, b: 3},
+                {a: 6, b: 8},
+                {a: 8, b: 6},
+                {a: 9, b: 12}
+            ][val];
+            const a = config.a;
+            const b = config.b;
+            
+            document.getElementById('l4-val-a').innerText = a; 
+            document.getElementById('l4-val-b').innerText = b;
+            
+            const scale = 11, originX = 250, originY = 220, endX = originX + (a * scale), endY = originY - (b * scale);
+            
             document.getElementById('l4-tri').setAttribute('points', `${originX},${originY} ${endX},${originY} ${originX},${endY}`);
             document.getElementById('l4-right-angle').setAttribute('points', `${originX+15},${originY} ${originX+15},${originY-15} ${originX},${originY-15}`);
             document.getElementById('l4-lbl-a').setAttribute('x', originX + (a*scale)/2); document.getElementById('l4-lbl-a').setAttribute('y', originY + 20);
             document.getElementById('l4-lbl-b').setAttribute('x', originX - 20); document.getElementById('l4-lbl-b').setAttribute('y', originY - (b*scale)/2);
             document.getElementById('l4-lbl-c').setAttribute('x', originX + (a*scale)/2 + 10); document.getElementById('l4-lbl-c').setAttribute('y', originY - (b*scale)/2 - 10);
+            
             let sqA = `<rect x="${originX}" y="${originY}" width="${a*scale}" height="${a*scale}" fill="rgba(16, 185, 129, 0.15)" stroke="var(--success)"/>`;
             let sqB = `<rect x="${originX - (b*scale)}" y="${endY}" width="${b*scale}" height="${b*scale}" fill="rgba(16, 185, 129, 0.15)" stroke="var(--success)"/>`;
+            
             document.getElementById('l4-squares').innerHTML = sqA + sqB;
         }
+
         function checkL4() {
-            const a = parseInt(document.getElementById('l4-slider-a').value), b = parseInt(document.getElementById('l4-slider-b').value), userC = parseFloat(document.getElementById('l4-input-c').value);
+            const val = parseInt(document.getElementById('l4-slider-a').value);
+            const config = [
+                {a: 3, b: 4},
+                {a: 4, b: 3},
+                {a: 6, b: 8},
+                {a: 8, b: 6},
+                {a: 9, b: 12}
+            ][val];
+            const a = config.a;
+            const b = config.b;
+            const userC = parseFloat(document.getElementById('l4-input-c').value);
             const fb = document.getElementById('fb-l4'), fbTxt = document.getElementById('fb-l4-txt'), fbIcon = document.getElementById('fb-l4-icon');
-            if(isNaN(userC)) return; const trueC = Math.sqrt(a*a + b*b);
+            
+            if(isNaN(userC)) return; 
+            const trueC = Math.sqrt(a*a + b*b);
+            
             if(userC === parseFloat(trueC.toFixed(2)) || userC === trueC) {
-                fb.className = 'feedback-box success'; fbIcon.innerText = '✔'; fbTxt.innerText = 'Tepat sekali! Prediksimu benar berdasarkan perhitungan luas persegi.'; fb.style.display = 'flex'; createConfetti();
-                const scale = 12, oX = 250, oY = 220, angle = Math.atan2(b, a) * 180 / Math.PI, cLength = trueC * scale;
+                fb.className = 'feedback-box success'; fbIcon.innerText = '✔'; 
+                fbTxt.innerHTML = `Tepat sekali! Prediksimu benar.<br><span style="color:var(--primary); font-weight:700;">Bukti: ${a}² + ${b}² = ${trueC}²</span>`; 
+                fb.style.display = 'flex'; createConfetti();
+                
+                const scale = 11, oX = 250, oY = 220, angle = Math.atan2(b, a) * 180 / Math.PI, cLength = trueC * scale;
                 const sqC = `<rect x="${oX}" y="${oY - (b*scale)}" width="${cLength}" height="${cLength}" transform="rotate(${angle}, ${oX}, ${oY - (b*scale)})" fill="rgba(79, 70, 229, 0.15)" stroke="var(--primary)"/>`;
-                document.getElementById('l4-squares').innerHTML += sqC;
+                
+                let sqA = `<rect x="${oX}" y="${oY}" width="${a*scale}" height="${a*scale}" fill="rgba(16, 185, 129, 0.15)" stroke="var(--success)"/>`;
+                let sqB = `<rect x="${oX - (b*scale)}" y="${oY - (b*scale)}" width="${b*scale}" height="${b*scale}" fill="rgba(16, 185, 129, 0.15)" stroke="var(--success)"/>`;
+                
+                document.getElementById('l4-squares').innerHTML = sqA + sqB + sqC;
                 document.getElementById('btnNextL4').style.display = 'inline-block';
             } else {
                 gameState.attempts['l4'] = true;
@@ -1737,328 +1904,354 @@
             if (a*a + b*b === c*c) { 
                 fb.className = 'feedback-box success'; fbIcon.innerText = '🎉'; fbTxt.innerText = `Pembuktian Berhasil! Kamu mensintesis tripel barumu sendiri: ${a}² + ${b}² = ${c}² (${a*a} + ${b*b} = ${c*c})`; fb.style.display = 'flex'; createConfetti(); 
             document.getElementById('btnNextL6').style.display = 'inline-block';
-        } 
-        else { gameState.attempts['l6_syn'] = true; fb.className = 'feedback-box error'; fbIcon.innerText = '❌'; fbTxt.innerText = `${a}² + ${b}² = ${a*a+b*b}. Sedangkan ${c}² = ${c*c}. Pembuktian salah, silakan cari pola yang benar!`; fb.style.display = 'flex'; }
-    }
-
-    // --- LEVEL 7 UPDATE FUNCTIONS ---
-    function checkL7Completion() {
-        if (gameState.attempts['l7_t1_solved'] && gameState.attempts['l7_t2_solved'] && 
-            gameState.attempts['l7_t3_solved'] && gameState.attempts['l7_t4_solved']) {
-            document.querySelectorAll('.btnNextL7').forEach(btn => btn.style.display = 'inline-block');
-        }
-    }
-
-    function switchTab(index) {
-        document.querySelectorAll('.ctx-tab').forEach(t => t.classList.remove('active')); document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        document.querySelectorAll('.ctx-tab')[index-1].classList.add('active'); document.getElementById(`tab-${index}`).classList.add('active');
-    }
-
-    // L7 T1: Tangga
-    function updateL7T1() {
-        let b = parseInt(document.getElementById('l7-t1-slider-b').value);
-        let c = parseInt(document.getElementById('l7-t1-slider-c').value);
-        if (c <= b) { 
-            c = b + 1; 
-            document.getElementById('l7-t1-slider-c').value = c; 
-        }
-        let a = Math.sqrt(c*c - b*b);
-        document.getElementById('l7-t1-val-b').innerText = b; 
-        document.getElementById('l7-t1-val-c').innerText = c;
-        
-        const scale = 10, wallX = 60, floorY = 220;
-        const endX = wallX + (a * scale);
-        const endY = floorY - (b * scale);
-        
-        // Draw Ladder Rails
-        document.getElementById('l7-t1-ladder-rail1').setAttribute('x1', wallX - 5);
-        document.getElementById('l7-t1-ladder-rail1').setAttribute('y1', endY);
-        document.getElementById('l7-t1-ladder-rail1').setAttribute('x2', endX - 5);
-        document.getElementById('l7-t1-ladder-rail1').setAttribute('y2', floorY);
-        
-        document.getElementById('l7-t1-ladder-rail2').setAttribute('x1', wallX + 5);
-        document.getElementById('l7-t1-ladder-rail2').setAttribute('y1', endY - 5);
-        document.getElementById('l7-t1-ladder-rail2').setAttribute('x2', endX + 5);
-        document.getElementById('l7-t1-ladder-rail2').setAttribute('y2', floorY - 5);
-        
-        // Draw Rungs Dynamically
-        let rungsHtml = '';
-        const steps = 7;
-        for(let i=1; i<=steps; i++) {
-            let t = i / (steps + 1);
-            let r1x = (wallX - 5) + t * ((endX - 5) - (wallX - 5));
-            let r1y = endY + t * (floorY - endY);
-            let r2x = (wallX + 5) + t * ((endX + 5) - (wallX + 5));
-            let r2y = (endY - 5) + t * ((floorY - 5) - (endY - 5));
-            rungsHtml += `<line x1="${r1x}" y1="${r1y}" x2="${r2x}" y2="${r2y}" stroke="#78350f" stroke-width="3"/>`;
-        }
-        document.getElementById('l7-t1-ladder-rungs').innerHTML = rungsHtml;
-
-        // Math Overlay Updates
-        document.getElementById('l7-t1-tri').setAttribute('points', `${wallX},${endY} ${wallX},${floorY} ${endX},${floorY}`);
-        document.getElementById('l7-t1-node-top').setAttribute('cy', endY);
-        document.getElementById('l7-t1-node-bot').setAttribute('cx', endX);
-    }
-    
-    function checkL7T1() {
-        const b = parseInt(document.getElementById('l7-t1-slider-b').value);
-        const c = parseInt(document.getElementById('l7-t1-slider-c').value);
-        const userA = parseFloat(document.getElementById('l7-t1-input-a').value);
-        const fb = document.getElementById('fb-l7-t1'), fbTxt = document.getElementById('fb-txt-t1'), fbIcon = document.getElementById('fb-icon-t1');
-        
-        if(isNaN(userA)) return; 
-        const trueA = Math.sqrt(c*c - b*b);
-        if(c <= b) {
-            fb.className = 'feedback-box error'; fbIcon.innerText = '⚠️'; fbTxt.innerText = 'Panjang tangga (sisi miring) harus lebih panjang dari tinggi dinding!'; fb.style.display = 'flex';
-            return;
+            } 
+            else { gameState.attempts['l6_syn'] = true; fb.className = 'feedback-box error'; fbIcon.innerText = '❌'; fbTxt.innerText = `${a}² + ${b}² = ${a*a+b*b}. Sedangkan ${c}² = ${c*c}. Pembuktian salah, silakan cari pola yang benar!`; fb.style.display = 'flex'; }
         }
 
-        if(userA === parseFloat(trueA.toFixed(2)) || userA === trueA) { 
-            fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
-            if (!gameState.attempts['l7_t1_solved']) {
-                gameState.attempts['l7_t1_solved'] = true;
-                gameState.scores[7].earned += 5;
-                gameState.totalScore += 5;
-                animateScoreHUD(gameState.totalScore);
-                saveData();
+        // --- LEVEL 7 UPDATE FUNCTIONS ---
+        function checkL7Completion() {
+            if (gameState.attempts['l7_t1_solved'] && gameState.attempts['l7_t2_solved'] && 
+                gameState.attempts['l7_t3_solved'] && gameState.attempts['l7_t4_solved']) {
+                document.getElementById('btn-l7-finish').style.display = 'inline-block';
+            } else if (gameState.attempts['l7_t4_solved']) {
+                const fbTxt = document.getElementById('fb-txt-t4');
+                if (!fbTxt.innerHTML.includes('belum menyelesaikan')) {
+                    fbTxt.innerHTML += "<br><span style='color:var(--danger); font-size:0.9rem; margin-top:5px; display:inline-block; font-weight:600;'>⚠️ Kamu belum menyelesaikan simulasi sebelumnya. Silakan selesaikan simulasi Tangga, Atap Rumah, dan Mercusuar terlebih dahulu untuk membuka kunci level selanjutnya.</span>";
+                }
             }
-            checkL7Completion();
-        } 
-        else { 
-            fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
-        }
-    }
-    
-    // L7 T2: Atap
-    function updateL7T2() {
-        const a = parseInt(document.getElementById('l7-t2-slider-a').value);
-        const b = parseInt(document.getElementById('l7-t2-slider-b').value);
-        document.getElementById('l7-t2-val-a').innerText = a; 
-        document.getElementById('l7-t2-val-b').innerText = b;
-        
-        const scale = 5, cX = 125, baseY = 150;
-        const leftX = cX - (a * scale);
-        const rightX = cX + (a * scale);
-        const peakY = baseY - (b * scale);
-        
-        // House Body Updates
-        document.getElementById('l7-t2-house').setAttribute('x', leftX);
-        document.getElementById('l7-t2-house').setAttribute('width', (a * 2 * scale));
-        
-        const win1 = document.getElementById('l7-t2-win1');
-        const win2 = document.getElementById('l7-t2-win2');
-        if (a < 8) {
-            win1.style.display = 'none'; win2.style.display = 'none';
-        } else {
-            win1.style.display = 'block'; win2.style.display = 'block';
-            win1.setAttribute('x', leftX + 10);
-            win2.setAttribute('x', rightX - 35);
         }
 
-        // Roof Updates
-        document.getElementById('l7-t2-roof-solid').setAttribute('points', `${cX},${peakY} ${rightX+10},${baseY} ${leftX-10},${baseY}`);
-        document.getElementById('l7-t2-roof').setAttribute('points', `${cX},${peakY} ${rightX+10},${baseY} ${leftX-10},${baseY}`);
-        document.getElementById('l7-t2-roof-trim').setAttribute('points', `${cX},${peakY} ${rightX+10},${baseY} ${rightX+5},${baseY} ${cX},${peakY+5} ${leftX-5},${baseY} ${leftX-10},${baseY}`);
-        
-        // Math Overlay Updates
-        document.getElementById('l7-t2-tri').setAttribute('points', `${cX},${peakY} ${rightX},${baseY} ${cX},${baseY}`);
-        document.getElementById('l7-t2-center').setAttribute('y1', peakY);
-        document.getElementById('l7-t2-node-peak').setAttribute('cy', peakY);
-        document.getElementById('l7-t2-node-edge').setAttribute('cx', rightX);
-    }
+        function switchTab(index) {
+            document.querySelectorAll('.ctx-tab').forEach(t => t.classList.remove('active')); document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.ctx-tab')[index-1].classList.add('active'); document.getElementById(`tab-${index}`).classList.add('active');
+        }
 
-    function checkL7T2() { 
-        const a = parseInt(document.getElementById('l7-t2-slider-a').value);
-        const b = parseInt(document.getElementById('l7-t2-slider-b').value);
-        const userC = parseFloat(document.getElementById('l7-t2-input-c').value);
-        const fb = document.getElementById('fb-l7-t2'), fbTxt = document.getElementById('fb-txt-t2'), fbIcon = document.getElementById('fb-icon-t2');
-        if(isNaN(userC)) return; 
-        const trueC = Math.sqrt(a*a + b*b);
-        if(userC === parseFloat(trueC.toFixed(2)) || userC === trueC) { 
-            fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
-            if (!gameState.attempts['l7_t2_solved']) {
-                gameState.attempts['l7_t2_solved'] = true;
-                gameState.scores[7].earned += 5;
-                gameState.totalScore += 5;
-                animateScoreHUD(gameState.totalScore);
-                saveData();
+        // L7 T1: Tangga
+        function updateL7T1() {
+            let b = parseInt(document.getElementById('l7-t1-slider-b').value);
+            let c = parseInt(document.getElementById('l7-t1-slider-c').value);
+            if (c <= b) { 
+                c = b + 1; 
+                document.getElementById('l7-t1-slider-c').value = c; 
             }
-            checkL7Completion();
-        } 
-        else { 
-            fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
-        }
-    }
-    
-    // L7 T3: Kapal
-    function updateL7T3() {
-        let a = parseInt(document.getElementById('l7-t3-slider-a').value);
-        let c = parseInt(document.getElementById('l7-t3-slider-c').value);
-        if (c <= a) { c = a + 1; document.getElementById('l7-t3-slider-c').value = c; }
-        let b = Math.sqrt(c*c - a*a);
-        
-        document.getElementById('l7-t3-val-a').innerText = a; 
-        document.getElementById('l7-t3-val-c').innerText = c;
-        
-        const scale = 4.5, lX = 25, seaY = 170;
-        const lighthouseLightY = 45; // The lighthouse is a static reference object.
-        const shipX = lX + (a * scale);
-
-        // Ship Update
-        document.getElementById('l7-t3-ship').setAttribute('transform', `translate(${shipX}, 170)`); 
-        
-        // Math Overlay Updates
-        document.getElementById('l7-t3-tri').setAttribute('points', `${lX},${lighthouseLightY} ${lX},${seaY} ${shipX},${seaY}`);
-        document.getElementById('l7-t3-node-light').setAttribute('cy', lighthouseLightY);
-        document.getElementById('l7-t3-node-ship').setAttribute('cx', shipX);
-    }
-
-    function checkL7T3() { 
-        const a = parseInt(document.getElementById('l7-t3-slider-a').value);
-        const c = parseInt(document.getElementById('l7-t3-slider-c').value);
-        const userB = parseFloat(document.getElementById('l7-t3-input-b').value); 
-        const fb = document.getElementById('fb-l7-t3'), fbTxt = document.getElementById('fb-txt-t3'), fbIcon = document.getElementById('fb-icon-t3');
-        if(isNaN(userB)) return; 
-        const trueB = Math.sqrt(c*c - a*a);
-        if(c <= a) {
-            fb.className = 'feedback-box error'; fbIcon.innerText = '⚠️'; fbTxt.innerText = 'Jarak pandang (sisi miring) harus lebih panjang dari jarak mendatar!'; fb.style.display = 'flex';
-            return;
-        }
-
-        if(userB === parseFloat(trueB.toFixed(2)) || userB === trueB) { 
-            fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
-            if (!gameState.attempts['l7_t3_solved']) {
-                gameState.attempts['l7_t3_solved'] = true;
-                gameState.scores[7].earned += 5;
-                gameState.totalScore += 5;
-                animateScoreHUD(gameState.totalScore);
-                saveData();
+            let a = Math.sqrt(c*c - b*b);
+            document.getElementById('l7-t1-val-b').innerText = b; 
+            document.getElementById('l7-t1-val-c').innerText = c;
+            
+            const scale = 10, wallX = 60, floorY = 220;
+            const endX = wallX + (a * scale);
+            const endY = floorY - (b * scale);
+            
+            // Draw Ladder Rails
+            document.getElementById('l7-t1-ladder-rail1').setAttribute('x1', wallX - 5);
+            document.getElementById('l7-t1-ladder-rail1').setAttribute('y1', endY);
+            document.getElementById('l7-t1-ladder-rail1').setAttribute('x2', endX - 5);
+            document.getElementById('l7-t1-ladder-rail1').setAttribute('y2', floorY);
+            
+            document.getElementById('l7-t1-ladder-rail2').setAttribute('x1', wallX + 5);
+            document.getElementById('l7-t1-ladder-rail2').setAttribute('y1', endY - 5);
+            document.getElementById('l7-t1-ladder-rail2').setAttribute('x2', endX + 5);
+            document.getElementById('l7-t1-ladder-rail2').setAttribute('y2', floorY - 5);
+            
+            // Draw Rungs Dynamically
+            let rungsHtml = '';
+            const steps = 7;
+            for(let i=1; i<=steps; i++) {
+                let t = i / (steps + 1);
+                let r1x = (wallX - 5) + t * ((endX - 5) - (wallX - 5));
+                let r1y = endY + t * (floorY - endY);
+                let r2x = (wallX + 5) + t * ((endX + 5) - (wallX + 5));
+                let r2y = (endY - 5) + t * ((floorY - 5) - (endY - 5));
+                rungsHtml += `<line x1="${r1x}" y1="${r1y}" x2="${r2x}" y2="${r2y}" stroke="#78350f" stroke-width="3"/>`;
             }
-            checkL7Completion();
-        } 
-        else { 
-            fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
-        }
-    }
-    
-    // L7 T4: Layang-layang
-    function updateL7T4() {
-        const a = parseInt(document.getElementById('l7-t4-slider-a').value); 
-        const b = parseInt(document.getElementById('l7-t4-slider-b').value);
-        document.getElementById('l7-t4-val-a').innerText = a; 
-        document.getElementById('l7-t4-val-b').innerText = b;
-        
-        const scale = 6, handX = 55, handY = 190;
-        const kiteX = handX + (a * scale);
-        const kiteY = handY - (b * scale);
-        
-        // Kite Group Update
-        document.getElementById('l7-t4-kite-group').setAttribute('transform', `translate(${kiteX}, ${kiteY}) rotate(15)`);
-        
-        // String Update
-        document.getElementById('l7-t4-string').setAttribute('x2', kiteX);
-        document.getElementById('l7-t4-string').setAttribute('y2', kiteY);
-        
-        // Math Overlay Updates
-        document.getElementById('l7-t4-tri').setAttribute('points', `${handX},${handY} ${kiteX},${handY} ${kiteX},${kiteY}`);
-        document.getElementById('l7-t4-node-kite').setAttribute('cx', kiteX);
-        document.getElementById('l7-t4-node-kite').setAttribute('cy', kiteY);
-        document.getElementById('l7-t4-node-corner').setAttribute('cx', kiteX);
-    }
+            document.getElementById('l7-t1-ladder-rungs').innerHTML = rungsHtml;
 
-    function checkL7T4() { 
-        const a = parseInt(document.getElementById('l7-t4-slider-a').value);
-        const b = parseInt(document.getElementById('l7-t4-slider-b').value);
-        const userC = parseFloat(document.getElementById('l7-t4-input-c').value); 
-        const fb = document.getElementById('fb-l7-t4'), fbTxt = document.getElementById('fb-txt-t4'), fbIcon = document.getElementById('fb-icon-t4');
-        if(isNaN(userC)) return; 
-        const trueC = Math.sqrt(a*a + b*b);
+            // Math Overlay Updates
+            document.getElementById('l7-t1-tri').setAttribute('points', `${wallX},${endY} ${wallX},${floorY} ${endX},${floorY}`);
+            document.getElementById('l7-t1-node-top').setAttribute('cy', endY);
+            document.getElementById('l7-t1-node-bot').setAttribute('cx', endX);
+        }
         
-        if(userC === parseFloat(trueC.toFixed(2)) || userC === trueC) { 
-            fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
-            if (!gameState.attempts['l7_t4_solved']) {
-                gameState.attempts['l7_t4_solved'] = true;
-                gameState.scores[7].earned += 5;
-                gameState.totalScore += 5;
-                animateScoreHUD(gameState.totalScore);
-                saveData();
+        function checkL7T1() {
+            const b = parseInt(document.getElementById('l7-t1-slider-b').value);
+            const c = parseInt(document.getElementById('l7-t1-slider-c').value);
+            const userA = parseFloat(document.getElementById('l7-t1-input-a').value);
+            const fb = document.getElementById('fb-l7-t1'), fbTxt = document.getElementById('fb-txt-t1'), fbIcon = document.getElementById('fb-icon-t1');
+            
+            if(isNaN(userA)) return; 
+            const trueA = Math.sqrt(c*c - b*b);
+            if(c <= b) {
+                fb.className = 'feedback-box error'; fbIcon.innerText = '⚠️'; fbTxt.innerText = 'Panjang tangga (sisi miring) harus lebih panjang dari tinggi dinding!'; fb.style.display = 'flex';
+                return;
             }
-            checkL7Completion();
-        } 
-        else { 
-            fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
-        }
-    }
 
-    function checkL7Completion() {
-        if (gameState.attempts['l7_t1_solved'] && gameState.attempts['l7_t2_solved'] && 
-            gameState.attempts['l7_t3_solved'] && gameState.attempts['l7_t4_solved']) {
-            document.querySelectorAll('.btnNextL7').forEach(btn => btn.style.display = 'inline-block');
+            if(userA === parseFloat(trueA.toFixed(2)) || userA === trueA) { 
+                fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
+                if (!gameState.attempts['l7_t1_solved']) {
+                    gameState.attempts['l7_t1_solved'] = true;
+                    gameState.scores[7].earned += 5;
+                    gameState.totalScore += 5;
+                    animateScoreHUD(gameState.totalScore);
+                    saveData();
+                }
+                document.getElementById('btn-l7-next-t1').style.display = 'inline-block';
+                checkL7Completion();
+            } 
+            else { 
+                fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
+            }
         }
-    }
-
-    function finishJourney() {
-        const ans1 = document.getElementById('ref1').value.trim();
-        const ans2 = document.getElementById('ref2').value.trim();
-        const errDiv = document.getElementById('l8-error');
-
-        // Memastikan seluruh isian tidak kosong
-        if(ans1 === '' || ans2 === '') { 
-            errDiv.style.display = 'block'; 
-            errDiv.innerText = 'Silakan tuliskan jawaban refleksimu di seluruh kotak sebelum menyelesaikan misi ya!'; 
-            return; 
-        }
-        errDiv.style.display = 'none';
         
-        // Mengubah tombol menjadi mode memuat
-        const btnSubmit = document.querySelector('button[onclick="finishJourney()"]');
-        if (btnSubmit) {
-            btnSubmit.disabled = true; 
-            btnSubmit.innerText = "Merekam Data..."; 
-            btnSubmit.style.opacity = "0.7"; 
-            btnSubmit.style.cursor = "not-allowed"; 
+        // L7 T2: Atap
+        function updateL7T2() {
+            const a = parseInt(document.getElementById('l7-t2-slider-a').value);
+            const b = parseInt(document.getElementById('l7-t2-slider-b').value);
+            document.getElementById('l7-t2-val-a').innerText = a; 
+            document.getElementById('l7-t2-val-b').innerText = b;
+            
+            const scale = 5, cX = 125, baseY = 150;
+            const leftX = cX - (a * scale);
+            const rightX = cX + (a * scale);
+            const peakY = baseY - (b * scale);
+            
+            // House Body Updates
+            document.getElementById('l7-t2-house').setAttribute('x', leftX);
+            document.getElementById('l7-t2-house').setAttribute('width', (a * 2 * scale));
+            
+            const win1 = document.getElementById('l7-t2-win1');
+            const win2 = document.getElementById('l7-t2-win2');
+            if (a < 8) {
+                win1.style.display = 'none'; win2.style.display = 'none';
+            } else {
+                win1.style.display = 'block'; win2.style.display = 'block';
+                win1.setAttribute('x', leftX + 10);
+                win2.setAttribute('x', rightX - 35);
+            }
+
+            // Roof Updates
+            document.getElementById('l7-t2-roof-solid').setAttribute('points', `${cX},${peakY} ${rightX+10},${baseY} ${leftX-10},${baseY}`);
+            document.getElementById('l7-t2-roof').setAttribute('points', `${cX},${peakY} ${rightX+10},${baseY} ${leftX-10},${baseY}`);
+            document.getElementById('l7-t2-roof-trim').setAttribute('points', `${cX},${peakY} ${rightX+10},${baseY} ${rightX+5},${baseY} ${cX},${peakY+5} ${leftX-5},${baseY} ${leftX-10},${baseY}`);
+            
+            // Math Overlay Updates
+            document.getElementById('l7-t2-tri').setAttribute('points', `${cX},${peakY} ${rightX},${baseY} ${cX},${baseY}`);
+            document.getElementById('l7-t2-center').setAttribute('y1', peakY);
+            document.getElementById('l7-t2-node-peak').setAttribute('cy', peakY);
+            document.getElementById('l7-t2-node-edge').setAttribute('cx', rightX);
         }
-    
-        // Ganti URL di bawah ini dengan URL Web App terbaru milik Anda
-        const urlDatabase = "https://script.google.com/macros/s/AKfycbyQrno0K8Trppjzki6tbVGXO2Q5NXmvMTgp_wPVkoMH8ucbybtBjh3GTvuZE_nynhwJcQ/exec";
-        
-        // Mengemas data ke dalam format formulir standar
-        const formData = new URLSearchParams();
-        formData.append('nama', gameState.studentInfo.name);
-        formData.append('absen', gameState.studentInfo.absen);
-        formData.append('kelas', gameState.studentInfo.kelas);
-        
-        // Menambahkan parameter skor spesifik untuk setiap level
-        formData.append('skorL1', gameState.scores[1].earned);
-        formData.append('skorL2', gameState.scores[2].earned);
-        formData.append('skorL3', gameState.scores[3].earned);
-        formData.append('skorL4', gameState.scores[4].earned);
-        formData.append('skorL5', gameState.scores[5].earned);
-        formData.append('skorL6', gameState.scores[6].earned);
-        formData.append('skorL7', gameState.scores[7].earned);
 
-        formData.append('skor', gameState.totalScore);
-        formData.append('refleksi1', ans1);
-        formData.append('refleksi2', ans2);
+        function checkL7T2() { 
+            const a = parseInt(document.getElementById('l7-t2-slider-a').value);
+            const b = parseInt(document.getElementById('l7-t2-slider-b').value);
+            const userC = parseFloat(document.getElementById('l7-t2-input-c').value);
+            const fb = document.getElementById('fb-l7-t2'), fbTxt = document.getElementById('fb-txt-t2'), fbIcon = document.getElementById('fb-icon-t2');
+            if(isNaN(userC)) return; 
+            const trueC = Math.sqrt(a*a + b*b);
+            if(userC === parseFloat(trueC.toFixed(2)) || userC === trueC) { 
+                fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
+                if (!gameState.attempts['l7_t2_solved']) {
+                    gameState.attempts['l7_t2_solved'] = true;
+                    gameState.scores[7].earned += 5;
+                    gameState.totalScore += 5;
+                    animateScoreHUD(gameState.totalScore);
+                    saveData();
+                }
+                document.getElementById('btn-l7-next-t2').style.display = 'inline-block';
+                checkL7Completion();
+            } 
+            else { 
+                fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
+            }
+        }
+        
+        // L7 T3: Kapal
+        function updateL7T3() {
+            let a = parseInt(document.getElementById('l7-t3-slider-a').value);
+            let c = parseInt(document.getElementById('l7-t3-slider-c').value);
+            if (c <= a) { c = a + 1; document.getElementById('l7-t3-slider-c').value = c; }
+            let b = Math.sqrt(c*c - a*a);
+            
+            document.getElementById('l7-t3-val-a').innerText = a; 
+            document.getElementById('l7-t3-val-c').innerText = c;
+            
+            const scale = 4.5, lX = 25, seaY = 170;
+            const lighthouseLightY = 45; // The lighthouse is a static reference object.
+            const shipX = lX + (a * scale);
 
-        // Melakukan pengiriman ke server
-        fetch(urlDatabase, {
-            method: 'POST',
-            body: formData
-        }).then(() => {
-            document.getElementById('finalModal').style.display = 'flex'; 
-            createConfetti();
-        }).catch((error) => {
-            console.error("Kendala jaringan:", error);
+            // Ship Update
+            document.getElementById('l7-t3-ship').setAttribute('transform', `translate(${shipX}, 170)`); 
+            
+            // Math Overlay Updates
+            document.getElementById('l7-t3-tri').setAttribute('points', `${lX},${lighthouseLightY} ${lX},${seaY} ${shipX},${seaY}`);
+            document.getElementById('l7-t3-node-light').setAttribute('cy', lighthouseLightY);
+            document.getElementById('l7-t3-node-ship').setAttribute('cx', shipX);
+        }
+
+        function checkL7T3() { 
+            const a = parseInt(document.getElementById('l7-t3-slider-a').value);
+            const c = parseInt(document.getElementById('l7-t3-slider-c').value);
+            const userB = parseFloat(document.getElementById('l7-t3-input-b').value); 
+            const fb = document.getElementById('fb-l7-t3'), fbTxt = document.getElementById('fb-txt-t3'), fbIcon = document.getElementById('fb-icon-t3');
+            if(isNaN(userB)) return; 
+            const trueB = Math.sqrt(c*c - a*a);
+            if(c <= a) {
+                fb.className = 'feedback-box error'; fbIcon.innerText = '⚠️'; fbTxt.innerText = 'Jarak pandang (sisi miring) harus lebih panjang dari jarak mendatar!'; fb.style.display = 'flex';
+                return;
+            }
+
+            if(userB === parseFloat(trueB.toFixed(2)) || userB === trueB) { 
+                fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
+                if (!gameState.attempts['l7_t3_solved']) {
+                    gameState.attempts['l7_t3_solved'] = true;
+                    gameState.scores[7].earned += 5;
+                    gameState.totalScore += 5;
+                    animateScoreHUD(gameState.totalScore);
+                    saveData();
+                }
+                document.getElementById('btn-l7-next-t3').style.display = 'inline-block';
+                checkL7Completion();
+            } 
+            else { 
+                fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
+            }
+        }
+        
+        // L7 T4: Layang-layang
+        function updateL7T4() {
+            const a = parseInt(document.getElementById('l7-t4-slider-a').value); 
+            const b = parseInt(document.getElementById('l7-t4-slider-b').value);
+            document.getElementById('l7-t4-val-a').innerText = a; 
+            document.getElementById('l7-t4-val-b').innerText = b;
+            
+            const scale = 6, handX = 55, handY = 190;
+            const kiteX = handX + (a * scale);
+            const kiteY = handY - (b * scale);
+            
+            // Kite Group Update
+            document.getElementById('l7-t4-kite-group').setAttribute('transform', `translate(${kiteX}, ${kiteY}) rotate(15)`);
+            
+            // String Update
+            document.getElementById('l7-t4-string').setAttribute('x2', kiteX);
+            document.getElementById('l7-t4-string').setAttribute('y2', kiteY);
+            
+            // Math Overlay Updates
+            document.getElementById('l7-t4-tri').setAttribute('points', `${handX},${handY} ${kiteX},${handY} ${kiteX},${kiteY}`);
+            document.getElementById('l7-t4-node-kite').setAttribute('cx', kiteX);
+            document.getElementById('l7-t4-node-kite').setAttribute('cy', kiteY);
+            document.getElementById('l7-t4-node-corner').setAttribute('cx', kiteX);
+        }
+
+        function checkL7T4() { 
+            const a = parseInt(document.getElementById('l7-t4-slider-a').value);
+            const b = parseInt(document.getElementById('l7-t4-slider-b').value);
+            const userC = parseFloat(document.getElementById('l7-t4-input-c').value); 
+            const fb = document.getElementById('fb-l7-t4'), fbTxt = document.getElementById('fb-txt-t4'), fbIcon = document.getElementById('fb-icon-t4');
+            if(isNaN(userC)) return; 
+            const trueC = Math.sqrt(a*a + b*b);
+            
+            if(userC === parseFloat(trueC.toFixed(2)) || userC === trueC) { 
+                fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
+                if (!gameState.attempts['l7_t4_solved']) {
+                    gameState.attempts['l7_t4_solved'] = true;
+                    gameState.scores[7].earned += 5;
+                    gameState.totalScore += 5;
+                    animateScoreHUD(gameState.totalScore);
+                    saveData();
+                }
+                checkL7Completion();
+            } 
+            else { 
+                fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
+            }
+        }
+
+        function finishJourney() {
+            const ans1 = document.getElementById('ref1').value.trim();
+            const ans2 = document.getElementById('ref2').value.trim();
+            const errDiv = document.getElementById('l8-error');
+
+            if(ans1 === '' || ans2 === '') { 
+                errDiv.style.display = 'block'; 
+                errDiv.innerText = 'Silakan tuliskan jawaban refleksimu di seluruh kotak sebelum menyelesaikan misi ya!'; 
+                return; 
+            }
+            errDiv.style.display = 'none';
+            
+            const btnSubmit = document.querySelector('button[onclick="finishJourney()"]');
             if (btnSubmit) {
-                btnSubmit.disabled = false;
-                btnSubmit.innerText = "Selesai Pembelajaran";
-                btnSubmit.style.opacity = "1";
-                btnSubmit.style.cursor = "pointer";
+                btnSubmit.disabled = true; 
+                btnSubmit.innerText = "Merekam Data..."; 
+                btnSubmit.style.opacity = "0.7"; 
+                btnSubmit.style.cursor = "not-allowed"; 
             }
-            alert("Gagal merekam data. Pastikan koneksi internet stabil dan coba kembali.");
-        });
-    }
-</script>
+        
+            const urlDatabase = "https://script.google.com/macros/s/AKfycbyQrno0K8Trppjzki6tbVGXO2Q5NXmvMTgp_wPVkoMH8ucbybtBjh3GTvuZE_nynhwJcQ/exec";
+            
+            const formData = new URLSearchParams();
+            formData.append('nama', gameState.studentInfo.name);
+            formData.append('absen', gameState.studentInfo.absen);
+            formData.append('kelas', gameState.studentInfo.kelas);
+            
+            formData.append('skorL1', gameState.scores[1].earned);
+            formData.append('skorL2', gameState.scores[2].earned);
+            formData.append('skorL3', gameState.scores[3].earned);
+            formData.append('skorL4', gameState.scores[4].earned);
+            formData.append('skorL5', gameState.scores[5].earned);
+            formData.append('skorL6', gameState.scores[6].earned);
+            formData.append('skorL7', gameState.scores[7].earned);
+
+            formData.append('skor', gameState.totalScore);
+            formData.append('refleksi1', ans1);
+            formData.append('refleksi2', ans2);
+
+            fetch(urlDatabase, {
+                method: 'POST',
+                body: formData
+            }).then(() => {
+                document.getElementById('finalModal').style.display = 'flex'; 
+                createConfetti();
+            }).catch((error) => {
+                console.error("Kendala jaringan:", error);
+                if (btnSubmit) {
+                    btnSubmit.disabled = false;
+                    btnSubmit.innerText = "Selesai Pembelajaran";
+                    btnSubmit.style.opacity = "1";
+                    btnSubmit.style.cursor = "pointer";
+                }
+                alert("Gagal merekam data. Pastikan koneksi internet stabil dan coba kembali.");
+            });
+        }
+
+        // Ekspos fungsi ke global (window)
+        window.submitIdentity = submitIdentity;
+        window.navTo = navTo;
+        window.resetProgress = resetProgress;
+        window.nextPhaseL1 = nextPhaseL1;
+        window.prevPhaseL1 = prevPhaseL1;
+        window.nextPhaseL2 = nextPhaseL2;
+        window.prevPhaseL2 = prevPhaseL2;
+        window.nextPhaseL3 = nextPhaseL3;
+        window.prevPhaseL3 = prevPhaseL3;
+        window.wrongAnswer = wrongAnswer;
+        window.correctAnswerHandler = correctAnswerHandler;
+        window.checkFormula = checkFormula;
+        window.updateL4 = updateL4;
+        window.checkL4 = checkL4;
+        window.completeLevel = completeLevel;
+        window.checkTriple = checkTriple;
+        window.checkSynthesis = checkSynthesis;
+        window.switchTab = switchTab;
+        window.updateL7T1 = updateL7T1;
+        window.checkL7T1 = checkL7T1;
+        window.updateL7T2 = updateL7T2;
+        window.checkL7T2 = checkL7T2;
+        window.updateL7T3 = updateL7T3;
+        window.checkL7T3 = checkL7T3;
+        window.updateL7T4 = updateL7T4;
+        window.checkL7T4 = checkL7T4;
+        window.finishJourney = finishJourney;
+        window.nextLevelFromModal = nextLevelFromModal;
+        window.closeModal = closeModal;
+    </script>
 </body>
 </html>
