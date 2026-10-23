@@ -703,7 +703,7 @@
                 <div class="question-text">Penerapan Teorema Pythagoras. Selesaikan simulasi ini sebelum menghitung!</div>
                 
                 <div style="background: var(--warning-light); border: 1px solid var(--warning); color: #92400e; padding: 12px 15px; border-radius: 10px; font-size: 0.95rem; font-weight: 500; margin-bottom: 20px;">
-                    📌 <strong>Petunjuk:</strong> Kerjakan simulasi secara berurutan mulai dari tab paling kiri (Tangga) hingga tab paling kanan (Layang-layang).
+                    📌 <strong>Petunjuk:</strong> Kerjakan simulasi secara berurutan mulai dari tab paling kiri (Tangga) hingga tab paling kanan (Layang-layang). Setiap simulasi bernilai 5 poin, dan poin penuh hanya diperoleh jika jawaban benar pada percobaan pertama.
                 </div>
 
                 <div class="context-tabs">
@@ -2032,8 +2032,10 @@
                 fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
                 if (!gameState.attempts['l7_t1_solved']) {
                     gameState.attempts['l7_t1_solved'] = true;
-                    gameState.scores[7].earned += 5;
-                    gameState.totalScore += 5;
+                    const pts = gameState.attempts['l7_t1_wrong'] ? 0 : 5;
+                    gameState.scores[7].earned += pts;
+                    gameState.totalScore += pts;
+                    fbTxt.innerText = pts === 5 ? '✓ Jawaban benar! Hebat! (+5 poin)' : '✓ Jawaban benar! (+0 poin, karena sebelumnya sempat salah)';
                     animateScoreHUD(gameState.totalScore);
                     saveData();
                 }
@@ -2041,6 +2043,7 @@
                 checkL7Completion();
             } 
             else { 
+                if (!gameState.attempts['l7_t1_solved']) { gameState.attempts['l7_t1_wrong'] = true; saveData(); }
                 fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
             }
         }
@@ -2094,8 +2097,10 @@
                 fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
                 if (!gameState.attempts['l7_t2_solved']) {
                     gameState.attempts['l7_t2_solved'] = true;
-                    gameState.scores[7].earned += 5;
-                    gameState.totalScore += 5;
+                    const pts = gameState.attempts['l7_t2_wrong'] ? 0 : 5;
+                    gameState.scores[7].earned += pts;
+                    gameState.totalScore += pts;
+                    fbTxt.innerText = pts === 5 ? '✓ Jawaban benar! Hebat! (+5 poin)' : '✓ Jawaban benar! (+0 poin, karena sebelumnya sempat salah)';
                     animateScoreHUD(gameState.totalScore);
                     saveData();
                 }
@@ -2103,6 +2108,7 @@
                 checkL7Completion();
             } 
             else { 
+                if (!gameState.attempts['l7_t2_solved']) { gameState.attempts['l7_t2_wrong'] = true; saveData(); }
                 fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
             }
         }
@@ -2146,8 +2152,10 @@
                 fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
                 if (!gameState.attempts['l7_t3_solved']) {
                     gameState.attempts['l7_t3_solved'] = true;
-                    gameState.scores[7].earned += 5;
-                    gameState.totalScore += 5;
+                    const pts = gameState.attempts['l7_t3_wrong'] ? 0 : 5;
+                    gameState.scores[7].earned += pts;
+                    gameState.totalScore += pts;
+                    fbTxt.innerText = pts === 5 ? '✓ Jawaban benar! Hebat! (+5 poin)' : '✓ Jawaban benar! (+0 poin, karena sebelumnya sempat salah)';
                     animateScoreHUD(gameState.totalScore);
                     saveData();
                 }
@@ -2155,6 +2163,7 @@
                 checkL7Completion();
             } 
             else { 
+                if (!gameState.attempts['l7_t3_solved']) { gameState.attempts['l7_t3_wrong'] = true; saveData(); }
                 fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
             }
         }
@@ -2196,14 +2205,17 @@
                 fb.className = 'feedback-box success'; fbIcon.innerText = '✅'; fbTxt.innerText = '✓ Jawaban benar! Hebat!'; fb.style.display = 'flex'; createConfetti(); 
                 if (!gameState.attempts['l7_t4_solved']) {
                     gameState.attempts['l7_t4_solved'] = true;
-                    gameState.scores[7].earned += 5;
-                    gameState.totalScore += 5;
+                    const pts = gameState.attempts['l7_t4_wrong'] ? 0 : 5;
+                    gameState.scores[7].earned += pts;
+                    gameState.totalScore += pts;
+                    fbTxt.innerText = pts === 5 ? '✓ Jawaban benar! Hebat! (+5 poin)' : '✓ Jawaban benar! (+0 poin, karena sebelumnya sempat salah)';
                     animateScoreHUD(gameState.totalScore);
                     saveData();
                 }
                 checkL7Completion();
             } 
             else { 
+                if (!gameState.attempts['l7_t4_solved']) { gameState.attempts['l7_t4_wrong'] = true; saveData(); }
                 fb.className = 'feedback-box error'; fbIcon.innerText = '✗'; fbTxt.innerText = 'Jawaban masih salah. Coba periksa kembali menggunakan Teorema Pythagoras.'; fb.style.display = 'flex'; 
             }
         }
